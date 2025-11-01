@@ -1,0 +1,41 @@
+.progress {
+    box-shadow: rgba(0,0,0,0.15) 0 3px 5px
+}
+
+body {
+    background-image: url("../images/icons/cross.svg");
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    animation: move-bg 20s linear infinite;
+}
+@keyframes move-bg {
+    from {
+        background-position: 0 20px;
+    }
+    to {
+        background-position: 0 100px; /* смещаем по X */
+    }
+}
+
+@keyframes move-bg-vert {
+    from {
+        background-position: 0 100px;
+    }
+    to {
+        background-position: 100px 0;
+    }
+
+}
+.cross-bg {
+    background-image: url("../images/icons/cross.svg");
+    background-repeat: repeat;
+    background-size: 5px 5px;
+}
+
+.pattern-bg {
+    background-image: url("../images/wip-pattern.png");
+    background-repeat: repeat;
+    background-size: 400px;
+    animation: move-bg-vert 20s linear infinite;
+    height: 160px;
+}
