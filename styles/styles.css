@@ -1,45 +1,20 @@
 html, body {
     height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 .progress {
-    box-shadow: rgba(0,0,0,0.15) 0 3px 5px
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/icons/cross.svg");
-    background-repeat: repeat;
-    background-size: 20px 20px;
-    animation: move-bg 20s linear infinite;
-}
-footer {
-    margin-top: auto;
-}
-
-@keyframes move-bg {
-    from {
-        background-position: 0 20px;
-    }
-    to {
-        background-position: 0 100px; /* смещаем по X */
-    }
-}
-
-@keyframes move-bg-vert {
-    from {
-        background-position: 0 100px;
-    }
-    to {
-        background-position: 100px 0;
-    }
-
-}
-.cross-bg {
-    background-image: url("../images/icons/cross.svg");
-    background-repeat: repeat;
-    background-size: 5px 5px;
+    box-shadow: rgba(0,0,0,0.15) 0 3px 5px;
 }
 
 .pattern-bg {
@@ -48,4 +23,22 @@ footer {
     background-size: 400px;
     animation: move-bg-vert 20s linear infinite;
     height: 160px;
+}
+
+@keyframes move-bg-vert {
+    from { background-position: 0 100px; }
+    to { background-position: 100px 0; }
+}
+
+/* Адаптивные изображения карточек */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 180px;
+    }
 }
